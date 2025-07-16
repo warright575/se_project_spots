@@ -78,8 +78,8 @@
   gap: 8px;
   font-size: 16px;
   font-weight: 500;
-  line-height: 1; /* Changed from 100% to 1 for proper horizontal alignment */
-  white-space: nowrap; /* Prevent line breaks */
+  line-height: 1; 
+  white-space: nowrap; 
 }
 
 @media screen and (max-width: 900px) {
@@ -103,12 +103,12 @@
   }
 
   .profile__add-btn {
-    margin: 20px 0 0 0; /* Center and add spacing above */
+    margin: 20px 0 0 0;
     width: 180px;
     min-width: 0;
     max-width: 100%;
     justify-content: center;
-    white-space: nowrap; /* Keep text on one line */
+    white-space: nowrap;
   }
 }
 
@@ -147,7 +147,7 @@
     min-width: 0;
     max-width: 100%;
     justify-content: center;
-    white-space: nowrap; /* Keep text on one line */
+    white-space: nowrap;
     padding: 14px 0;
   }
 }
