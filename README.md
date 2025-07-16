@@ -40,3 +40,9 @@ Spots is an image sharing web application that allows users to upload, view, and
 ## License
 
 This project is licensed under the MIT License.
+
+## Deployment
+
+The webpage is deployed and available on GitHub Pages.
+
+Deployment Link: https://warright575.github.io/se_project_spots/

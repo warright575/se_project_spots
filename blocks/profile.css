@@ -2,14 +2,13 @@
   display: flex;
   padding: 34px 0 20px;
   border-bottom: 1px solid rgba(33, 33, 33, 0.4);
-  max-width: 1280px;
 }
 
 .profile__avatar {
   margin-right: 20px;
   width: 190px;
   height: 190px;
-  border-radius: 10px;
+  border-radius: 8px;
 }
 
 .profile__column {
@@ -18,7 +17,7 @@
 }
 
 .profile__name {
-  margin: 0 0 1px;
+  margin: 0 0 12px;
   font-weight: 500;
   font-size: 32px;
   line-height: 1;
@@ -29,10 +28,11 @@
   -webkit-box-orient: vertical;
   max-width: 432px;
   font-family: "Poppins", sans-serif;
+  color: #212121:
 }
 
 .profile__description {
-  margin-bottom: 32px;
+  margin: 0;
   text-overflow: ellipsis;
   overflow: hidden;
   display: -webkit-box;
@@ -43,6 +43,7 @@
   font-family: "Poppins", sans-serif;
   color: rgba(33, 33, 33, 0.7);
   font-weight: 500;
+  line-height: 1;
 }
 
 .profile__edit-btn {
@@ -57,17 +58,14 @@
   gap: 8px;
   font-family: "Poppins", sans-serif;
   color: rgba(33, 33, 33, 0.7);
-}
-
-.profile__edit-btn svg {
-  display: block;
-  vertical-align: middle;
-  height: 1em;
-  width: 1em;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 100%;
 }
 
 .profile__add-btn {
-  margin-left: 661px;
+  margin-left: auto;
+  margin-right: 0px;
   margin-top: 138px;
   width: 149px;
   height: 52px;
@@ -78,6 +76,10 @@
   display: flex;
   align-items: center;
   gap: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1; /* Changed from 100% to 1 for proper horizontal alignment */
+  white-space: nowrap; /* Prevent line breaks */
 }
 
 @media screen and (max-width: 900px) {
@@ -140,13 +142,12 @@
   }
 
   .profile__add-btn {
-    margin: 10px 0 0 0;
+    margin: 0 auto;
     width: 100%;
     min-width: 0;
     max-width: 100%;
     justify-content: center;
     white-space: nowrap; /* Keep text on one line */
-    font-size: 16px;
     padding: 14px 0;
   }
 }
