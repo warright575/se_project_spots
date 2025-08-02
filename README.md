@@ -46,3 +46,7 @@ This project is licensed under the MIT License.
 The webpage is deployed and available on GitHub Pages.
 
 Deployment Link: https://warright575.github.io/se_project_spots/
+
+## Google Drive Link To Video About This Project
+
+https://drive.google.com/file/d/18BB9G1vAmRHAJwYNPAflcsMdkN99lhpl/view?usp=sharing
