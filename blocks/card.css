@@ -19,7 +19,7 @@
 }
 
 .card__like-btn {
-  background-image: url(../images/heart.png);
+  background-image: url(../images/heart.svg);
   width: 23px;
   height: 20px;
   border: none;
@@ -54,7 +54,7 @@
   }
 
   .card__title {
-    font-size: 18px;
+    font-size: 16px;
     line-height: 140%;
     max-width: 235px;
   }
