@@ -33,7 +33,11 @@
           <div class="profile__column">
             <h1 class="profile__name">Bessie Coleman</h1>
             <p class="profile__description">Civil Aviator</p>
-            <button type="button" class="profile__edit-btn">
+            <button
+              type="button"
+              class="profile__edit-btn"
+              for="modal__is-opened"
+            >
               <img src="./images/pencil.svg" alt="pencil icon" />Edit profile
             </button>
           </div>
@@ -117,6 +121,68 @@
       <footer class="footer">
         <p class="footer__text">2025 &copy; Spots</p>
       </footer>
+      <div class="modal modal_is-opened">
+        <div class="modal__content">
+          <button type="button" class="modal__close-btn">
+            <img src="./images/Close Icon.svg" alt="Close modal" />
+          </button>
+          <h2 class="modal__title">Edit Profile</h2>
+          <form class="modal__form">
+            <label for="profile-name-input" class="modal__label">
+              Name
+              <input
+                id="profile-name-input"
+                type="text"
+                class="modal__input"
+                placeholder="Type your name"
+              />
+            </label>
+            <label for="profile-description-input" class="modal__label">
+              Description
+              <input
+                id="profile-description-input"
+                type="text"
+                class="modal__input"
+                placeholder="Describe yourself"
+              />
+            </label>
+            <button type="submit" class="modal__submit-btn">
+              <img src="./images/save_btn.svg" alt="Save" />
+            </button>
+          </form>
+        </div>
+      </div>
+      <div class="modal modal_is-opened">
+        <div class="modal__content">
+          <button type="button" class="modal__close-btn">
+            <img src="./images/Close Icon.svg" alt="Close modal" />
+          </button>
+          <h2 class="modal__title">New Post</h2>
+          <form class="modal__form">
+            <label for="image-link-input" class="modal__label">
+              Image Link
+              <input
+                id="image-link-input"
+                type="text"
+                class="modal__input"
+                placeholder="Place a link to the picture"
+              />
+            </label>
+            <label for="caption-input" class="modal__label">
+              Caption
+              <input
+                id="caption-input"
+                type="text"
+                class="modal__input"
+                placeholder="Type your caption"
+              />
+            </label>
+            <button type="submit" class="modal__submit-btn">
+              <img src="./images/save_btn.svg" alt="Save" />
+            </button>
+          </form>
+        </div>
+      </div>
     </div>
   </body>
 </html>
