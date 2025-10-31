@@ -33,11 +33,15 @@
           <div class="profile__column">
             <h1 class="profile__name">Bessie Coleman</h1>
             <p class="profile__description">Civil Aviator</p>
-            <button type="button" class="profile__edit-btn">
+            <button
+              type="button"
+              class="profile__edit-btn"
+              id="edit-profile-btn"
+            >
               <img src="./images/pencil.svg" alt="pencil icon" />Edit profile
             </button>
           </div>
-          <button type="button" class="profile__add-btn">
+          <button type="button" class="profile__add-btn" id="new-post-btn">
             <img src="./images/plus.svg" alt="plus icon" />New Post
           </button>
         </section>
@@ -117,7 +121,7 @@
       <footer class="footer">
         <p class="footer__text">2025 &copy; Spots</p>
       </footer>
-      <div class="modal">
+      <div class="modal" id="edit-profile-modal">
         <div class="modal__content">
           <button type="button" class="modal__close-btn">
             <img src="./images/Close_Icon.svg" alt="Close modal" />
@@ -148,7 +152,7 @@
           </form>
         </div>
       </div>
-      <div class="modal">
+      <div class="modal" id="new-post-modal">
         <div class="modal__content">
           <button type="button" class="modal__close-btn">
             <img src="./images/Close_Icon.svg" alt="Close modal" />
@@ -180,5 +184,6 @@
         </div>
       </div>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>
