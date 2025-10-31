@@ -3,7 +3,6 @@ const modalAddButton = document.querySelector(".profile__add-btn");
 const modalProfileEdit = modalEditButton.querySelector("#edit-profile-btn");
 const modalNewPost = modalAddButton.querySelector("#new-post-btn");
 const modalCloseBtn = modalNewPost.querySelector(".modal__close-btn");
-const modalCloseBtn = modalProfileEdit.querySelector(".modal__close-btn");
 
 modalEditButton.addEventListener("click", function () {
   modalProfileEdit.classList.add("modal modal_is-opened");
