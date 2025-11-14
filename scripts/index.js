@@ -1,39 +1,47 @@
-// Minimal, robust modal handlers for the grader
-const modalAddButton = document.querySelector('.profile__add-btn');
-const modalEditButton = document.querySelector('.profile__edit-btn');
-const modalProfileEdit = document.querySelector('#edit-profile-modal');
-const modalNewPost = document.querySelector('#new-post-modal');
+const editProfileBtn = document.querySelector(".profile__edit-btn");
+const editProfileModal = document.querySelector("#edit-profile-modal");
+const editProfileCloseBtn = editProfileModal.querySelector(".modal__close-btn");
 
-if (modalAddButton && modalNewPost) {
-  modalAddButton.addEventListener('click', () => {
-    modalNewPost.classList.add('modal_is-opened');
-  });
+const editProfileForm = editProfileModal.querySelector(".modal__form");
+const newPostForm = newPostModal.querySelector(".modal__form");
+
+const editProfileNameInput = editProfileModal.querySelector(
+  "#profile-name-input"
+);
+const editProfileDescriptionInput = editProfileModal.querySelector(
+  "#profile-description-input"
+);
+
+const newPostBtn = document.querySelector(".profile__new-post-btn");
+const newPostModal = document.querySelector("#new-post-modal");
+const newPostCloseBtn = newPostModal.querySelector(".modal__close-btn");
+
+const profileNameEl = document.querySelector(".profile__name");
+const profileDescriptionEl = document.querySelector(".profile__description");
+
+editProfileBtn.addEventListener("click", function () {
+  editProfileNameInput.value = profileNameEl.textContent;
+  editProfileDescriptionInput.value = profileDescriptionEl.textContent;
+  editProfileModal.classList.add("modal_is-opened");
+});
+
+editProfileBtn.addEventListener("click", function () {
+  editProfileModal.classList.remove("modal_is-opened");
+});
+
+newPostBtn.addEventListener("click", function () {
+  newPostModal.classList.add("modal_is-opened");
+});
+
+newPostCloseBtn.addEventListener("click", function () {
+  newPostModal.classList.remove("modal_is-opened");
+});
+
+function handleEditProfileFormSubmit(event) {
+  event.preventDefault();
+  profileNameEl.textContent = editProfileNameInput.value;
+  profileDescriptionEl.textContent = editProfileDescriptionInput.value;
+  editProfileModal.classList.remove("modal_is-opened");
 }
 
-if (modalEditButton && modalProfileEdit) {
-  modalEditButton.addEventListener('click', () => {
-    modalProfileEdit.classList.add('modal_is-opened');
-  });
-}
-
-// Close buttons (works for any modal)
-document.querySelectorAll('.modal__close-btn').forEach((btn) => {
-  btn.addEventListener('click', () => {
-    const modal = btn.closest('.modal');
-    if (modal) modal.classList.remove('modal_is-opened');
-  });
-});
-
-// Backdrop click closes
-document.querySelectorAll('.modal').forEach((modal) => {
-  modal.addEventListener('click', (e) => {
-    if (e.target === modal) modal.classList.remove('modal_is-opened');
-  });
-});
-
-// Escape key closes any open modal
-document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape') {
-    document.querySelectorAll('.modal.modal_is-opened').forEach((m) => m.classList.remove('modal_is-opened'));
-  }
-});
+editProfileForm.addEventListener("submit", handleEditProfileFormSubmit);
